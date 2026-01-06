@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    android:backgroundTint="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header: Tipe Absensi & Tanggal -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <!-- Badge Tipe Absensi -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                android:backgroundTint="#E8F5E9">
+
+                <TextView
+                    android:id="@+id/tvTipeAbsensi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MASUK"
+                    android:textSize="12sp"
+                    android:textColor="#4CAF50"
+                    android:textStyle="bold"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp" />
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <!-- Tanggal -->
+            <TextView
+                android:id="@+id/tvTanggal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="05 Jan 2026"
+                android:textSize="14sp"
+                android:textColor="#757575"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Foto Selfie -->
+        <ImageView
+            android:id="@+id/imgFoto"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="12dp"
+            android:background="@android:color/darker_gray"
+            android:contentDescription="Foto Absensi" />
+
+        <!-- Info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F5F5F5"
+            android:padding="12dp">
+
+            <!-- Nama -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="Nama"
+                    android:textSize="13sp"
+                    android:textColor="#757575" />
+
+                <TextView
+                    android:id="@+id/tvNama"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="John Doe"
+                    android:textSize="13sp"
+                    android:textColor="#212121"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Waktu -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="Waktu"
+                    android:textSize="13sp"
+                    android:textColor="#757575" />
+
+                <TextView
+                    android:id="@+id/tvWaktu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="08:00"
+                    android:textSize="13sp"
+                    android:textColor="#212121"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Lokasi -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lokasi"
+                    android:textSize="13sp"
+                    android:textColor="#757575" />
+
+                <TextView
+                    android:id="@+id/tvLokasi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Jl. Srijaya Negara..."
+                    android:textSize="13sp"
+                    android:textColor="#212121"
+                    android:maxLines="2"
+                    android:ellipsize="end" />
+            </LinearLayout>
+
+            <!-- Keterangan -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Keterangan"
+                    android:textSize="13sp"
+                    android:textColor="#757575"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tvKeterangan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Absen tepat waktu"
+                    android:textSize="13sp"
+                    android:textColor="#212121"
+                    android:maxLines="3"
+                    android:ellipsize="end" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
